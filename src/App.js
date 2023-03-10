@@ -10,11 +10,6 @@ function App() {
   const [alert, setalert] = useState(null);
 
   const [modetext, setmodetext] = useState('Dark Mode');
-  const [mystyle, setmystyle] = useState({
-    color: 'black',   //light mode onn
-    backgroundColor: 'white',
-    padding: '20px'
-  });
   const showalert = (message, type) => {
     setalert({
       msg: message,
@@ -30,12 +25,6 @@ function App() {
       setmode('dark');
       setmodetext("Light Mode");
      
-      setmystyle({
-        color: 'white',
-        backgroundColor: '#242424f3',  //blackish shade
-        border: '1px solid white',
-        padding: '25px'
-      });
       
       showalert("Dark mode has enabled", "success");
       document.body.style.backgroundColor = "#042743";
@@ -45,11 +34,6 @@ function App() {
       setmode('info-subtle');
       setmodetext("Dark Mode");
    
-      setmystyle({
-        color: 'black',
-        backgroundColor: 'white',
-        padding: '25px'
-      });
       
       showalert("Light mode has enabled", "success");
       document.body.style.backgroundColor = "white";
